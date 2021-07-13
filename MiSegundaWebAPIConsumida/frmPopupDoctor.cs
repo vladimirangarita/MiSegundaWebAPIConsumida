@@ -21,5 +21,10 @@ namespace MiSegundaWebAPIConsumida
         {
 
         }
+
+        private void BtnAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
