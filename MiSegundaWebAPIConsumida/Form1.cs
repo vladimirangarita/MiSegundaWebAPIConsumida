@@ -24,15 +24,30 @@ namespace MiSegundaWebAPIConsumida
           List<DoctorCLS> ListaDoctor = await oDoctorDAL.ListarDoctor();
             dgvDoctor.DataSource = ListaDoctor;
 
-            for (int i = 6; i < dgvDoctor.Columns.Count; i++)
-            {
-                dgvDoctor.Columns[i].Visible = false;
-            }
+            //for (int i = 6; i < dgvDoctor.Columns.Count; i++)
+            //{
+            //    dgvDoctor.Columns[i].Visible = false;
+            //}
 
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             ListarDoctor();
+        }
+
+        private void toolStripNuevo_Click(object sender, EventArgs e)
+        {
+            frmPopupDoctor oFrmPopupDoctor = new frmPopupDoctor();
+            oFrmPopupDoctor.IidDoctor = 0;
+            oFrmPopupDoctor.ShowDialog();
+        }
+
+        private void toolStripEditar_Click(object sender, EventArgs e)
+        {
+            frmPopupDoctor oFrmPopupDoctor = new frmPopupDoctor();
+            int IidDoctor = (int)dgvDoctor.CurrentRow.Cells[0].Value;
+            oFrmPopupDoctor.IidDoctor = IidDoctor;
+            oFrmPopupDoctor.ShowDialog();
         }
     }
 }

@@ -28,24 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvDoctor = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripNuevo = new System.Windows.Forms.ToolStripLabel();
             this.toolStripEditar = new System.Windows.Forms.ToolStripLabel();
             this.toolStripEliminar = new System.Windows.Forms.ToolStripLabel();
             this.toolStriSalir = new System.Windows.Forms.ToolStripLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctor)).BeginInit();
+            this.dgvDoctor = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctor)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvDoctor
-            // 
-            this.dgvDoctor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDoctor.Location = new System.Drawing.Point(0, 0);
-            this.dgvDoctor.Name = "dgvDoctor";
-            this.dgvDoctor.Size = new System.Drawing.Size(800, 450);
-            this.dgvDoctor.TabIndex = 0;
             // 
             // toolStrip1
             // 
@@ -65,12 +56,14 @@
             this.toolStripNuevo.Name = "toolStripNuevo";
             this.toolStripNuevo.Size = new System.Drawing.Size(42, 22);
             this.toolStripNuevo.Text = "Nuevo";
+            this.toolStripNuevo.Click += new System.EventHandler(this.toolStripNuevo_Click);
             // 
             // toolStripEditar
             // 
             this.toolStripEditar.Name = "toolStripEditar";
             this.toolStripEditar.Size = new System.Drawing.Size(37, 22);
             this.toolStripEditar.Text = "Editar";
+            this.toolStripEditar.Click += new System.EventHandler(this.toolStripEditar_Click);
             // 
             // toolStripEliminar
             // 
@@ -84,33 +77,41 @@
             this.toolStriSalir.Size = new System.Drawing.Size(29, 22);
             this.toolStriSalir.Text = "Salir";
             // 
+            // dgvDoctor
+            // 
+            this.dgvDoctor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDoctor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDoctor.Location = new System.Drawing.Point(0, 25);
+            this.dgvDoctor.Name = "dgvDoctor";
+            this.dgvDoctor.Size = new System.Drawing.Size(800, 425);
+            this.dgvDoctor.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvDoctor);
+            this.Controls.Add(this.toolStrip1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctor)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvDoctor;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripNuevo;
         private System.Windows.Forms.ToolStripLabel toolStripEditar;
         private System.Windows.Forms.ToolStripLabel toolStripEliminar;
         private System.Windows.Forms.ToolStripLabel toolStriSalir;
+        private System.Windows.Forms.DataGridView dgvDoctor;
     }
 }
 

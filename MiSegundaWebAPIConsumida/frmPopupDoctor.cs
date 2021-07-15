@@ -12,6 +12,7 @@ namespace MiSegundaWebAPIConsumida
 {
     public partial class frmPopupDoctor : Form
     {
+        public int IidDoctor { get; set; }
         public frmPopupDoctor()
         {
             InitializeComponent();
@@ -25,6 +26,17 @@ namespace MiSegundaWebAPIConsumida
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmPopupDoctor_Load(object sender, EventArgs e)
+        {
+            if (IidDoctor==0)
+            {
+                this.Text = "Agregando Doctor";
+            }else
+            {
+                this.Text = "Editando Doctor";
+            }
         }
     }
 }

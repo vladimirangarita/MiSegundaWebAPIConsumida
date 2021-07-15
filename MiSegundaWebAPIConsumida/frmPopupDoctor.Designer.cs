@@ -336,6 +336,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmPopupDoctor";
             this.Text = "frmPopupDoctor";
+            this.Load += new System.EventHandler(this.frmPopupDoctor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
