@@ -8,7 +8,7 @@ namespace MiSegundaWebAPIConsumida.Clases
 {
    public class EspecialidadCLS
     {
-    public int IidEspecialidad { get; set; }
-    public int Nombre { get; set; }
+    public int iiEspecialidad { get; set; }
+    public string nombreEspecialidad { get; set; }
     }
 }

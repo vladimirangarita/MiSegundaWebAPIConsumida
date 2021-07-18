@@ -24,10 +24,10 @@ namespace MiSegundaWebAPIConsumida
           List<DoctorCLS> ListaDoctor = await oDoctorDAL.ListarDoctor();
             dgvDoctor.DataSource = ListaDoctor;
 
-            //for (int i = 6; i < dgvDoctor.Columns.Count; i++)
-            //{
-            //    dgvDoctor.Columns[i].Visible = false;
-            //}
+            for (int i = 6; i < dgvDoctor.Columns.Count; i++)
+            {
+                dgvDoctor.Columns[i].Visible = false;
+            }
 
         }
         private void Form1_Load(object sender, EventArgs e)

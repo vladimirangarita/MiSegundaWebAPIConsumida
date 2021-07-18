@@ -8,7 +8,7 @@ namespace MiSegundaWebAPIConsumida.Clases
 {
     public class ClinicaCLS
     {
-        public int IidClinica { get; set; }
+        public int iidClinica { get; set; }
 
         public string NombreClinica { get; set; }
 
