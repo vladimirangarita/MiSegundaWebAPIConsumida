@@ -17,7 +17,7 @@ namespace MiSegundaWebAPIConsumida.CapaDatos
         {
             string rpta = "";
             HttpClient Cliente = new HttpClient();
-            string url = "http://192.168.250.7:8081/api/Doctor";
+            string url = "http://192.168.0.104:8081/api/Doctor";
             HttpResponseMessage Response = await Cliente.GetAsync(url);
             List<DoctorCLS> ListaDoctor = new List<DoctorCLS>();
             if (Response!=null)
@@ -32,7 +32,7 @@ namespace MiSegundaWebAPIConsumida.CapaDatos
         {
             string rpta = "";
             HttpClient Cliente = new HttpClient();
-            string url = "http://192.168.250.7:8081/api/Especialidad";
+            string url = "http://192.168.0.104:8081/api/Especialidad";
             HttpResponseMessage Response = await Cliente.GetAsync(url);
             List<EspecialidadCLS> ListaEspecialidad = new List<EspecialidadCLS>();
             if (Response != null)
@@ -48,7 +48,7 @@ namespace MiSegundaWebAPIConsumida.CapaDatos
         {
             string rpta = "";
             HttpClient Cliente = new HttpClient();
-            string url = "http://192.168.250.7:8081/api/Clinica";
+            string url = "http://192.168.0.104:8081/api/Clinica";
             HttpResponseMessage Response = await Cliente.GetAsync(url);
             List<ClinicaCLS> ListaClinica = new List<ClinicaCLS>();
             if (Response != null)
