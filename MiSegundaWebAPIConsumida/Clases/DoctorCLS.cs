@@ -20,7 +20,7 @@ namespace MiSegundaWebAPIConsumida.Clases
         public string Nombre { get; set; }
         public string ApPaterno { get; set; }
         public string ApMaterno { get; set; }
-        public string Foto { get; set; }
+        public string archivo { get; set; }
         public string NombreArchivo { get; set; }
         public int iidClinica { get; set; }
         public int iidEspecialidad { get; set; }

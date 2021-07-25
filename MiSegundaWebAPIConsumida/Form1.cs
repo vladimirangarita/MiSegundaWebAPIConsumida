@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +43,7 @@ namespace MiSegundaWebAPIConsumida
             oFrmPopupDoctor.IidDoctor = 0;
             oFrmPopupDoctor.ShowDialog();
         }
+     
 
         private void toolStripEditar_Click(object sender, EventArgs e)
         {
@@ -48,6 +51,23 @@ namespace MiSegundaWebAPIConsumida
             int IidDoctor = (int)dgvDoctor.CurrentRow.Cells[0].Value;
             oFrmPopupDoctor.IidDoctor = IidDoctor;
             oFrmPopupDoctor.ShowDialog();
+        }
+
+        private async void toolStripEliminar_Click(object sender, EventArgs e)
+        {
+            int iidDoctor = (int)dgvDoctor.CurrentRow.Cells[0].Value;
+            DoctorDAL oDoctorDAL = new DoctorDAL();
+            int rpta = await oDoctorDAL.EliminarDoctor(iidDoctor);
+
+            if (rpta==1)
+            {
+                MessageBox.Show("Eliminado...");
+                ListarDoctor();
+            }
+            else
+            {
+                MessageBox.Show("Error al eliminar");
+            }
         }
     }
 }

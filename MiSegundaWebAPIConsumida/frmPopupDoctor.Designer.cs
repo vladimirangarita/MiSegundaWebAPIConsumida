@@ -52,11 +52,11 @@
             this.dtpFechaContrato = new System.Windows.Forms.DateTimePicker();
             this.RbFeme = new System.Windows.Forms.RadioButton();
             this.RbMascu = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnAceptar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -264,14 +264,15 @@
             this.RbMascu.Text = "Masculino";
             this.RbMascu.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pbFoto
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(161, 366);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbFoto.Location = new System.Drawing.Point(267, 24);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(271, 323);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFoto.TabIndex = 26;
+            this.pbFoto.TabStop = false;
             // 
             // BtnBuscar
             // 
@@ -281,6 +282,7 @@
             this.BtnBuscar.TabIndex = 27;
             this.BtnBuscar.Text = "...";
             this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnAceptar
             // 
@@ -309,7 +311,7 @@
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnAceptar);
             this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.RbMascu);
             this.Controls.Add(this.RbFeme);
             this.Controls.Add(this.dtpFechaContrato);
@@ -337,7 +339,7 @@
             this.Name = "frmPopupDoctor";
             this.Text = "frmPopupDoctor";
             this.Load += new System.EventHandler(this.frmPopupDoctor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,7 +371,7 @@
         private System.Windows.Forms.DateTimePicker dtpFechaContrato;
         private System.Windows.Forms.RadioButton RbFeme;
         private System.Windows.Forms.RadioButton RbMascu;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Button BtnAceptar;
         private System.Windows.Forms.Button BtnCancelar;
